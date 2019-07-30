@@ -1,13 +1,18 @@
 import React from "react";
 import "../assets/user.css";
+import store from "../store";
+import { setActiveUserId } from "../actions/action-types";
 
 const User = ({ user }) => {
-  console.log(user);
   let keys = Object.keys(user);
   return (
     keys &&
     keys.map(d => (
-      <div className="user">
+      <div
+        key={user[d].user_id}
+        className="user"
+        onClick={handleUserClick.bind(null, user[d].user_id)}
+      >
         <img
           src={user[d].profile_pic}
           alt={user[d].name}
@@ -21,5 +26,9 @@ const User = ({ user }) => {
     ))
   );
 };
+
+function handleUserClick(user_id) {
+  store.dispatch(setActiveUserId(user_id));
+}
 
 export default User;

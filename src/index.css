@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-weight: 400;
   font-family: "Nunito Sans", sans-serif;

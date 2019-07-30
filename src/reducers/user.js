@@ -1,6 +1,5 @@
 import { generateUser } from "../static-data";
-console.log(generateUser());
 
-export default function User(state = generateUser(), action) {
+export default function user(state = generateUser(), action) {
   return state;
 }
