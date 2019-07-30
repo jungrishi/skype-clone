@@ -5,7 +5,7 @@ import App from "./containers/App";
 import store from "./store";
 
 const render = () => {
-  // fancyLog();
+  fancyLog();
   return ReactDOM.render(<App />, document.getElementById("root"));
 };
 render();

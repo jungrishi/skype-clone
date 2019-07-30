@@ -1,9 +1,11 @@
-const shortid = require("shortid"); // shortid.generate() returns a unique "short" id
-const txtgen = require("txtgen"); // txtgen.sentence() returns random "readable" sentences
-const faker = require("faker"); // faker is used for generating random fake data.
-const _ = require("lodash"); // lodash is a utility lib for Javascript
+import shortid from "shortid"; // shortid.generate() returns a unique "short" id
+import txtgen from "txtgen"; // txtgen.sentence() returns random "readable" sentences
+import faker from "faker"; // faker is used for generating random fake data.
+import _ from "lodash"; // lodash is a utility lib for Javascript
+import NO_OF_USERS from "./utils/globals";
 
-const users = generateUsers(10);
+const users = generateUsers(NO_OF_USERS);
+console.log(users);
 
 export const contacts = _.mapKeys(users, "user_id");
 
