@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import values from "lodash/object";
 import store from "../store";
 import Header from "../components/Header";
 import Chats from "../components/Chats";
@@ -14,7 +14,7 @@ const ChatWindow = ({ activeUserId }) => {
   return (
     <div className="chatWindow">
       <Header user={activeUser} />
-      <Chats messages={_.values(activeMessages)} />
+      <Chats messages={values(activeMessages)} />
       <MessageInput value={typing} />
     </div>
   );
