@@ -6,7 +6,7 @@
     "concurrently": "^4.1.1",
     "express": "^4.17.1",
     "faker": "^4.1.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mongoose": "^5.7.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
